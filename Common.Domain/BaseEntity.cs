@@ -8,6 +8,7 @@ using System.Collections.Specialized;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.Serialization;
 
 namespace Common.Domain
 {
@@ -25,6 +26,8 @@ namespace Common.Domain
 
 
         #region Constractors
+
+#nullable disable
         protected BaseEntity()
         {
             CreationDate = DateTime.Now;
@@ -45,39 +48,57 @@ namespace Common.Domain
 
         }
 
+#nullable disable
+
         #endregion
 
         #region Props
         public DateTime CreationDate { get; protected set; }
         public DateTime? ModificationDate { get; protected set; }
-        public TId? Id { get; protected set; }
+        public TId Id { get; protected set; }
 
         public bool IsChagned => _isChanged;
 
         #endregion
 
         #region Tracking Methods
-        public virtual void ChangeEntityState(EntityState entityState) => EntityState = entityState;
-        public virtual bool HasChanged() => _isChanged;
         public bool HasColumnChanged(string columnName) => _previousStage.ContainsKey(columnName);
         public T GetPreviousValue<T>(string columnName)
         {
+            CheckPropertyNameIsNotNullOrEmpty(columnName);
+
             if (!_previousStage.ContainsKey(columnName)) return default(T)!;
 
             return (T)_previousStage[columnName]!;
         }
+        public void RollBackValue(string columnName)
+        {
+            CheckPropertyNameIsNotNullOrEmpty(columnName);
+
+            if (_previousStage.ContainsKey(columnName))
+                _backfeilds[columnName] = _previousStage[columnName];
+        }
+
+        public virtual void AccpetChanges()
+        {
+            _isChanged = true;
+        }
+
         #endregion
 
         protected T GetValue<T>([CallerMemberName] string? propertyName = null)
         {
-            if (!string.IsNullOrWhiteSpace(propertyName) && _backfeilds.ContainsKey(propertyName))
+            CheckPropertyNameIsNotNullOrEmpty(propertyName);
+
+            if (_backfeilds.ContainsKey(propertyName))
                 return (T)_backfeilds[propertyName]!;
 
             return default(T)!;
         }
         protected void SetValue<T>(T data, [CallerMemberName] string? propertyName = null)
         {
-            if (string.IsNullOrWhiteSpace(propertyName)) throw new InvalidDomainArgumentException("پارامتر ارسالی برای مقدار دهی پراپرتی خالی است و یا مقدار خاصی ندارد");
+            CheckPropertyNameIsNotNullOrEmpty(propertyName);
+
 
             if (!_backfeilds.ContainsKey(propertyName))
             {
@@ -98,7 +119,6 @@ namespace Common.Domain
                     {
                         _previousStage[propertyName] = _backfeilds[propertyName];
                         _isChanged = true;
-                        EntityState = EntityState.Modified;
                     }
                 }
                 else
@@ -110,13 +130,16 @@ namespace Common.Domain
         }
 
 
+        private void CheckPropertyNameIsNotNullOrEmpty(string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(propertyName))
+                throw new Exception();
+        }
+
+
         public virtual void SetModificationDate()
              => this.ModificationDate = DateTime.Now;
 
-        public virtual void AccpetChanges()
-        {
-            _isChanged = true;
-        }
     }
 
 
