@@ -1,0 +1,12 @@
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\bin\Debug\net8.0\Common.Domain.deps.json
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\bin\Debug\net8.0\Common.Domain.dll
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\bin\Debug\net8.0\Common.Domain.pdb
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.AssemblyInfoInputs.cache
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.AssemblyInfo.cs
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.sourcelink.json
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.dll
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\refint\Common.Domain.dll
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\Common.Domain.pdb
+E:\Projects\Tutorial Projects\BookShopTutorial\src\common\Common.Domain\obj\Debug\net8.0\ref\Common.Domain.dll

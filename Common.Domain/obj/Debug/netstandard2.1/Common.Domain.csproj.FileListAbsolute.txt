@@ -1,0 +1,19 @@
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.deps.json
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.dll
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.pdb
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfoInputs.cache
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfo.cs
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.sourcelink.json
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.dll
+E:\Projects\Online BookStore System\BookStoreSystem\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.pdb
+E:\Projects\TestCommon.Domain\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.deps.json
+E:\Projects\TestCommon.Domain\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.dll
+E:\Projects\TestCommon.Domain\Common.Domain\bin\Debug\netstandard2.1\Common.Domain.pdb
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfoInputs.cache
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfo.cs
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.dll
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.pdb
