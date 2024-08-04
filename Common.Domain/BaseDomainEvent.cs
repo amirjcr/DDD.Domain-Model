@@ -15,6 +15,5 @@ namespace Common.Domain
         public DateTime CreationDate { get; }
 
     }
-
 }
 

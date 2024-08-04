@@ -15,5 +15,6 @@ E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Doma
 E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfoInputs.cache
 E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.AssemblyInfo.cs
 E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.sourcelink.json
 E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.dll
 E:\Projects\TestCommon.Domain\Common.Domain\obj\Debug\netstandard2.1\Common.Domain.pdb

@@ -7,28 +7,12 @@
       "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|e:\\projects\\testcommon.domain\\common.domain\\changetracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\changetracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0ADE1D26-B953-47C6-8119-C535C2531E9E}|Common.Domain.Test\\Common.Domain.Test.csproj|e:\\projects\\testcommon.domain\\common.domain.test\\test_trackingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0ADE1D26-B953-47C6-8119-C535C2531E9E}|Common.Domain.Test\\Common.Domain.Test.csproj|solutionrelative:common.domain.test\\test_trackingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|e:\\projects\\testcommon.domain\\common.domain\\common.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\common.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|E:\\Projects\\TestCommon.Domain\\common.domain\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|E:\\Projects\\TestCommon.Domain\\common.domain\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B5497444-4AE1-43E3-94F3-6264D9666FC1}|DomainTest\\DomainTest.csproj|E:\\Projects\\TestCommon.Domain\\domaintest\\trackingsystemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B5497444-4AE1-43E3-94F3-6264D9666FC1}|DomainTest\\DomainTest.csproj|solutionrelative:domaintest\\trackingsystemtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseChagneTracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:Common.Domain\\BaseChagneTracker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|e:\\projects\\testcommon.domain\\common.domain\\entitycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\entitycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,34 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChangeTracker.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\ChangeTracker.cs",
-              "RelativeDocumentMoniker": "Common.Domain\\ChangeTracker.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\ChangeTracker.cs",
-              "RelativeToolTip": "Common.Domain\\ChangeTracker.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAwwCYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T17:10:02.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Common.Domain",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\Common.Domain.csproj",
-              "RelativeDocumentMoniker": "Common.Domain\\Common.Domain.csproj",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\Common.Domain.csproj",
-              "RelativeToolTip": "Common.Domain\\Common.Domain.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-04T17:09:22.747Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -88,27 +46,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ValueObject.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\ValueObject.cs",
-              "RelativeDocumentMoniker": "Common.Domain\\ValueObject.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\ValueObject.cs",
-              "RelativeToolTip": "Common.Domain\\ValueObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "Test_TrackingSystem.cs",
+              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain.Test\\Test_TrackingSystem.cs",
+              "RelativeDocumentMoniker": "Common.Domain.Test\\Test_TrackingSystem.cs",
+              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain.Test\\Test_TrackingSystem.cs",
+              "RelativeToolTip": "Common.Domain.Test\\Test_TrackingSystem.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAADwvzYAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T16:42:44.495Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseChagneTracker.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseChagneTracker.cs",
-              "RelativeDocumentMoniker": "Common.Domain\\BaseChagneTracker.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseChagneTracker.cs",
-              "RelativeToolTip": "Common.Domain\\BaseChagneTracker.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:15:54.955Z"
+              "WhenOpened": "2024-08-04T19:15:36.553Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -118,34 +65,23 @@
               "RelativeDocumentMoniker": "Common.Domain\\BaseEntity.cs",
               "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseEntity.cs",
               "RelativeToolTip": "Common.Domain\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAeAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAswF4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T15:03:49.04Z",
+              "WhenOpened": "2024-08-04T19:11:27.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AggregateRoot.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\AggregateRoot.cs",
-              "RelativeDocumentMoniker": "Common.Domain\\AggregateRoot.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\AggregateRoot.cs",
-              "RelativeToolTip": "Common.Domain\\AggregateRoot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
+              "DocumentIndex": 2,
+              "Title": "EntityCollection.cs",
+              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\EntityCollection.cs",
+              "RelativeDocumentMoniker": "Common.Domain\\EntityCollection.cs",
+              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\EntityCollection.cs",
+              "RelativeToolTip": "Common.Domain\\EntityCollection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwC4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T13:10:25.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TrackingsystemTest.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\DomainTest\\TrackingsystemTest.cs",
-              "RelativeDocumentMoniker": "DomainTest\\TrackingsystemTest.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\DomainTest\\TrackingsystemTest.cs",
-              "RelativeToolTip": "DomainTest\\TrackingsystemTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T13:09:53.001Z"
+              "WhenOpened": "2024-08-04T19:03:38.263Z",
+              "EditorCaption": ""
             }
           ]
         }

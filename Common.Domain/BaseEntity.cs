@@ -16,18 +16,18 @@ namespace Common.Domain
     {
 
         #region Private Feilds
-        private bool _isChanged = false;
+        protected bool _isChanged = false;
         protected bool _isRoot = false;
 
         protected List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
         private Dictionary<string, object?> _previousStage = new Dictionary<string, object?>(); // act as previous stage for this entity
         private Dictionary<string, object?> _backfeilds = new Dictionary<string, object?>(); // act as back feilds for properties 
+        private Dictionary<string, object> _childChanges = new Dictionary<string, object>();
+
         #endregion
 
 
         #region Constractors
-
-#nullable disable
         protected BaseEntity()
         {
             CreationDate = DateTime.Now;
@@ -48,7 +48,6 @@ namespace Common.Domain
 
         }
 
-#nullable disable
 
         #endregion
 
@@ -79,52 +78,69 @@ namespace Common.Domain
                 _backfeilds[columnName] = _previousStage[columnName];
         }
 
-        public virtual void AccpetChanges()
+        public Dictionary<string, object> GetEntityChanges()
         {
-            _isChanged = true;
+            var modifiedProperties = new Dictionary<string, object>();
+
+            foreach (var item in _backfeilds)
+                if (_previousStage.ContainsKey(item.Key) && item.Value != _previousStage[item.Key])
+                    modifiedProperties.Add(item.Key, item.Value!);
+
+            return modifiedProperties;
         }
+
+        public Dictionary<string, object> GetChildChanges() => _childChanges;
+
+        protected void UpdateChildChanges(string childName, object value)
+        {
+            if (!_childChanges.ContainsKey(childName))
+                _childChanges.Add(childName, value);
+            else
+                _childChanges[childName] = value;
+        }
+        public abstract void AccpetChanges();
 
         #endregion
 
         protected T GetValue<T>([CallerMemberName] string? propertyName = null)
         {
-            CheckPropertyNameIsNotNullOrEmpty(propertyName);
+            CheckPropertyNameIsNotNullOrEmpty(propertyName!);
 
-            if (_backfeilds.ContainsKey(propertyName))
-                return (T)_backfeilds[propertyName]!;
+            if (_backfeilds.ContainsKey(propertyName!))
+                return (T)_backfeilds[propertyName!]!;
 
             return default(T)!;
         }
         protected void SetValue<T>(T data, [CallerMemberName] string? propertyName = null)
         {
-            CheckPropertyNameIsNotNullOrEmpty(propertyName);
+            CheckPropertyNameIsNotNullOrEmpty(propertyName!);
 
 
-            if (!_backfeilds.ContainsKey(propertyName))
+            if (!_backfeilds.ContainsKey(propertyName!))
             {
-                _backfeilds.Add(propertyName, (object)data!);
+                _backfeilds.Add(propertyName!, (object)data!);
                 return;
             }
 
-            if (_backfeilds[propertyName] == null && !_previousStage.ContainsKey(propertyName))
+            if (_backfeilds[propertyName!] == null && !_previousStage.ContainsKey(propertyName!))
             {
-                _backfeilds[propertyName] = data;
+                _backfeilds[propertyName!] = data;
                 return;
             }
             else
             {
-                if (_previousStage.ContainsKey(propertyName))
+                if (_previousStage.ContainsKey(propertyName!))
                 {
-                    if (_previousStage[propertyName] != (object)data!)
+                    if (_previousStage[propertyName!] != (object)data!)
                     {
-                        _previousStage[propertyName] = _backfeilds[propertyName];
+                        _previousStage[propertyName!] = _backfeilds[propertyName!];
                         _isChanged = true;
                     }
                 }
                 else
-                    _previousStage.Add(propertyName, (object)data!);
+                    _previousStage.Add(propertyName!, (object)data!);
 
-                _backfeilds[propertyName] = (object)data!;
+                _backfeilds[propertyName!] = (object)data!;
             }
 
         }
@@ -147,6 +163,7 @@ namespace Common.Domain
     {
         public bool IsChagned { get; }
         void AccpetChanges();
+        Dictionary<string, object> GetCurrentChanges();
     }
 
 }

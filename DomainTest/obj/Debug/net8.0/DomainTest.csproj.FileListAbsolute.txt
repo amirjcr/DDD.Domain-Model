@@ -112,3 +112,4 @@ E:\Projects\TestCommon.Domain\DomainTest\obj\Debug\net8.0\refint\DomainTest.dll
 E:\Projects\TestCommon.Domain\DomainTest\obj\Debug\net8.0\DomainTest.pdb
 E:\Projects\TestCommon.Domain\DomainTest\obj\Debug\net8.0\DomainTest.genruntimeconfig.cache
 E:\Projects\TestCommon.Domain\DomainTest\obj\Debug\net8.0\ref\DomainTest.dll
+E:\Projects\TestCommon.Domain\DomainTest\obj\Debug\net8.0\DomainTest.sourcelink.json

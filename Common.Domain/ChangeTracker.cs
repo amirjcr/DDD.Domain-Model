@@ -54,7 +54,7 @@ namespace Common.Domain
     {
         void Track<T>(T entity, EntityTrackState state) where T : IBaseEntity;
 
-        IEnumerable<T> Getchanges<T>() where T : IBaseEntity;
+        IEnumerable<IBaseEntity> Getchanges();
     }
 
     public sealed class ChangeTracker : IChangeTracker
@@ -62,9 +62,9 @@ namespace Common.Domain
     {
         private readonly HashSet<ChangeLog<IBaseEntity>> _changes = new HashSet<ChangeLog<IBaseEntity>>();
 
-        public IEnumerable<T> Getchanges<T>() where T : IBaseEntity
+        public IEnumerable<IBaseEntity> Getchanges()
         {
-            return (IEnumerable<T>)_changes.Where(c => c.Data.IsChagned && c.State != EntityTrackState.UnChanged)
+            return _changes.Where(c => c.Data.IsChagned && c.State != EntityTrackState.UnChanged)
                            .Select(c => c.Data);
         }
 
@@ -76,10 +76,13 @@ namespace Common.Domain
             {
                 if (entity.IsChagned && state != EntityTrackState.Deleted)
                 {
+
+                    var currentlyChanged = entity.GetCurrentChanges();
+
                     var changeLog = _changes.SingleOrDefault(c => c.DataHashCode == entity.GetHashCode());
                     changeLog.UpdateLog(entity, state);
+                    return;
                 }
-
             }
 
             if (state == EntityTrackState.Added)
