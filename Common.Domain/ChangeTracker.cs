@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Common.Domain
 {
@@ -53,14 +55,16 @@ namespace Common.Domain
     public interface IChangeTracker
     {
         void Track<T>(T entity, EntityTrackState state) where T : IBaseEntity;
+        void Hold<T>(T entity) where T : IBaseEntity;
 
-        IEnumerable<IBaseEntity> Getchanges();
     }
 
     public sealed class ChangeTracker : IChangeTracker
 
     {
         private readonly HashSet<ChangeLog<IBaseEntity>> _changes = new HashSet<ChangeLog<IBaseEntity>>();
+        private readonly HashSet<IBaseEntity> _entityHolder = new HashSet<IBaseEntity>();
+
 
         public IEnumerable<IBaseEntity> Getchanges()
         {
@@ -70,29 +74,27 @@ namespace Common.Domain
 
         public void Track<T>(T entity, EntityTrackState state) where T : IBaseEntity
         {
-            EntityTrackState _state = EntityTrackState.UnChanged;
 
-            if (_changes.Any(c => c.DataHashCode == entity.GetHashCode()))
+            if (!entity.IsChagned) return;
+
+
+            if (entity.State == Enums.EntityState.Changed)
             {
-                if (entity.IsChagned && state != EntityTrackState.Deleted)
-                {
+                // get entity chagnes 
+            }
+            if (entity.HasAnyChildChanged())
+            {
+                var _childChanges = entity.GetChildChanges();
 
-                    var currentlyChanged = entity.GetCurrentChanges();
-
-                    var changeLog = _changes.SingleOrDefault(c => c.DataHashCode == entity.GetHashCode());
-                    changeLog.UpdateLog(entity, state);
-                    return;
-                }
+                foreach (var item in _childChanges)
+                    _changes.Add(new ChangeLog<IBaseEntity>(entity.GetHashCode(), entity, state));
             }
 
-            if (state == EntityTrackState.Added)
-                _state = EntityTrackState.Added;
-            else if (state == EntityTrackState.Modified)
-                _state = EntityTrackState.Modified;
-            else if (_state == EntityTrackState.Deleted)
-                _state = EntityTrackState.Deleted;
+        }
 
-            _changes.Add(new ChangeLog<IBaseEntity>(entity.GetHashCode(), entity, state));
+        public void Hold<T>(T entity) where T : IBaseEntity
+        {
+            _entityHolder.Add(entity);
         }
 
     }

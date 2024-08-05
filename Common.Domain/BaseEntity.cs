@@ -6,7 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data.SqlTypes;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 
@@ -16,7 +18,7 @@ namespace Common.Domain
     {
 
         #region Private Feilds
-        protected bool _isChanged = false;
+        private EntityState _state = EntityState.UnChanged;
         protected bool _isRoot = false;
 
         protected List<IDomainEvent> _domainEvents = new List<IDomainEvent>(); // for cases you will use domain event's
@@ -55,7 +57,7 @@ namespace Common.Domain
         public DateTime? ModificationDate { get; protected set; }
         public TId Id { get; protected set; }
 
-        public bool IsChagned => _isChanged;
+        public bool IsChagned => _state == EntityState.Changed || HasAnyChildChanged();
 
         public EntityState State => throw new NotImplementedException();
 
@@ -101,31 +103,35 @@ namespace Common.Domain
 
         public bool HasAnyChildChanged()
         {
-            return GetChildChanges().Count() > 0;
+            if (_previousStage.Count() == 0) return false;
+
+            foreach (var item in _previousStage)
+            {
+                if (item.Value is IBaseEntity child)
+                    return child.State == EntityState.Changed;
+                else if (item.Value is IEnumerable<IBaseEntity> childern)
+                    return childern.Any(c => c.State == EntityState.Changed);
+            }
+
+            return false;
         }
 
         public IEnumerable<IBaseEntity> GetChildChanges()
         {
-            foreach (var item in _backfeilds)
+            if (_previousStage.Count() == 0) return null!;
+
+            List<IBaseEntity>? changedList = new List<IBaseEntity>();
+
+            foreach (var item in _previousStage.Values)
             {
-                if (item.Value?.GetType() is IEnumerable<IBaseEntity>)
-                {
-                    var childerns = (item.Value as IEnumerable<IBaseEntity>);
-                    if (childerns == null || childerns.Count() == 0)
-                        continue;
+                if (item is IBaseEntity child && child.State == EntityState.Changed)
+                    changedList.Add(child);
 
-                    foreach (var child in childerns)
-                        if (child.State != EntityState.Unchanged)
-                            yield return child;
-                }
-                else if (item.Value?.GetType() is IBaseEntity)
-                {
-                    var child = item.Value as IBaseEntity;
-
-                    if (child?.State != EntityState.Unchanged)
-                        yield return child!;
-                }
+                else if (item is IEnumerable<IBaseEntity> childern)
+                    changedList.AddRange(childern.Where(c => c.State == EntityState.Changed));
             }
+
+            return changedList;
         }
 
         public virtual void SetModificationDate()
@@ -186,14 +192,38 @@ namespace Common.Domain
 
     public interface IBaseEntity
     {
+        /// <summary>
+        /// TrackChanges All across Aggregate
+        /// </summary>
         bool IsChagned { get; }
+
+        /// <summary>
+        /// Check if Entity is root or not
+        /// </summary>
         bool IsRoot { get; }
 
+        /// <summary>
+        /// Track Changes In Entity Level
+        /// </summary>
         EntityState State { get; }
+
+
+        /// <summary>
+        /// Accept Changes and Rest the Tracker State
+        /// </summary>
         void AccpetChanges();
 
+        /// <summary>
+        /// Check if an child entity is changed or not.
+        /// </summary>
+        /// <returns></returns>
         bool HasAnyChildChanged();
 
+
+        /// <summary>
+        /// GetAllChildChanges
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<IBaseEntity> GetChildChanges();
     }
 
