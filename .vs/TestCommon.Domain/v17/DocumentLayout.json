@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Projects\\TestCommon.Domain\\",
+  "WorkspaceRootPath": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|e:\\projects\\testcommon.domain\\common.domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|d:\\my-edu\\custom-trackingsystem\\ddd.domain-model\\common.domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0ADE1D26-B953-47C6-8119-C535C2531E9E}|Common.Domain.Test\\Common.Domain.Test.csproj|e:\\projects\\testcommon.domain\\common.domain.test\\test_trackingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0ADE1D26-B953-47C6-8119-C535C2531E9E}|Common.Domain.Test\\Common.Domain.Test.csproj|solutionrelative:common.domain.test\\test_trackingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|e:\\projects\\testcommon.domain\\common.domain\\entitycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\entitycollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|d:\\my-edu\\custom-trackingsystem\\ddd.domain-model\\common.domain\\enums\\entitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2E7E7A12-6B40-4303-9EC7-BECA13834FCB}|Common.Domain\\Common.Domain.csproj|solutionrelative:common.domain\\enums\\entitystate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,65 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Test_TrackingSystem.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain.Test\\Test_TrackingSystem.cs",
-              "RelativeDocumentMoniker": "Common.Domain.Test\\Test_TrackingSystem.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain.Test\\Test_TrackingSystem.cs",
-              "RelativeToolTip": "Common.Domain.Test\\Test_TrackingSystem.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAADwvzYAAABKAAAA",
+              "Title": "EntityState.cs",
+              "DocumentMoniker": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\Enums\\EntityState.cs",
+              "RelativeDocumentMoniker": "Common.Domain\\Enums\\EntityState.cs",
+              "ToolTip": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\Enums\\EntityState.cs",
+              "RelativeToolTip": "Common.Domain\\Enums\\EntityState.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T19:15:36.553Z",
+              "WhenOpened": "2024-08-05T04:45:13.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BaseEntity.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseEntity.cs",
+              "DocumentMoniker": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Common.Domain\\BaseEntity.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\BaseEntity.cs",
+              "ToolTip": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\BaseEntity.cs",
               "RelativeToolTip": "Common.Domain\\BaseEntity.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAswF4AAAAAAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAALoAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T19:11:27.476Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EntityCollection.cs",
-              "DocumentMoniker": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\EntityCollection.cs",
-              "RelativeDocumentMoniker": "Common.Domain\\EntityCollection.cs",
-              "ToolTip": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\EntityCollection.cs",
-              "RelativeToolTip": "Common.Domain\\EntityCollection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwC4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-04T19:03:38.263Z",
+              "WhenOpened": "2024-08-05T04:37:09.587Z",
               "EditorCaption": ""
             }
           ]

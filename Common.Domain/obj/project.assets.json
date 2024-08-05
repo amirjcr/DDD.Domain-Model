@@ -8,24 +8,19 @@
     ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\11\\.nuget\\packages\\": {},
-    "E:\\Visual studio 2022\\Shared\\NuGetPackages": {}
+    "C:\\Users\\a.moradi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\Common.Domain.csproj",
+      "projectUniqueName": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\Common.Domain.csproj",
       "projectName": "Common.Domain",
-      "projectPath": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\Common.Domain.csproj",
-      "packagesPath": "C:\\Users\\11\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\TestCommon.Domain\\Common.Domain\\obj\\",
+      "projectPath": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\Common.Domain.csproj",
+      "packagesPath": "C:\\Users\\a.moradi\\.nuget\\packages\\",
+      "outputPath": "D:\\My-Edu\\Custom-TrackingSystem\\DDD.Domain-Model\\Common.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "E:\\Visual studio 2022\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\11\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\a.moradi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,7 +28,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "G:\\Nuget Offline packages": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -19,10 +19,9 @@ namespace Common.Domain
         protected bool _isChanged = false;
         protected bool _isRoot = false;
 
-        protected List<IDomainEvent> _domainEvents = new List<IDomainEvent>();
+        protected List<IDomainEvent> _domainEvents = new List<IDomainEvent>(); // for cases you will use domain event's
         private Dictionary<string, object?> _previousStage = new Dictionary<string, object?>(); // act as previous stage for this entity
         private Dictionary<string, object?> _backfeilds = new Dictionary<string, object?>(); // act as back feilds for properties 
-        private Dictionary<string, object> _childChanges = new Dictionary<string, object>();
 
         #endregion
 
@@ -58,6 +57,10 @@ namespace Common.Domain
 
         public bool IsChagned => _isChanged;
 
+        public EntityState State => throw new NotImplementedException();
+
+        public bool IsRoot => throw new NotImplementedException();
+
         #endregion
 
         #region Tracking Methods
@@ -89,18 +92,52 @@ namespace Common.Domain
             return modifiedProperties;
         }
 
-        public Dictionary<string, object> GetChildChanges() => _childChanges;
-
-        protected void UpdateChildChanges(string childName, object value)
-        {
-            if (!_childChanges.ContainsKey(childName))
-                _childChanges.Add(childName, value);
-            else
-                _childChanges[childName] = value;
-        }
         public abstract void AccpetChanges();
 
         #endregion
+
+
+        #region Methods
+
+        public bool HasAnyChildChanged()
+        {
+            return GetChildChanges().Count() > 0;
+        }
+
+        public IEnumerable<IBaseEntity> GetChildChanges()
+        {
+            foreach (var item in _backfeilds)
+            {
+                if (item.Value?.GetType() is IEnumerable<IBaseEntity>)
+                {
+                    var childerns = (item.Value as IEnumerable<IBaseEntity>);
+                    if (childerns == null || childerns.Count() == 0)
+                        continue;
+
+                    foreach (var child in childerns)
+                        if (child.State != EntityState.Unchanged)
+                            yield return child;
+                }
+                else if (item.Value?.GetType() is IBaseEntity)
+                {
+                    var child = item.Value as IBaseEntity;
+
+                    if (child?.State != EntityState.Unchanged)
+                        yield return child!;
+                }
+            }
+        }
+
+        public virtual void SetModificationDate()
+             => this.ModificationDate = DateTime.Now;
+
+        #endregion
+
+        private void CheckPropertyNameIsNotNullOrEmpty(string propertyName)
+        {
+            if (string.IsNullOrWhiteSpace(propertyName))
+                throw new Exception();
+        }
 
         protected T GetValue<T>([CallerMemberName] string? propertyName = null)
         {
@@ -144,26 +181,20 @@ namespace Common.Domain
             }
 
         }
-
-
-        private void CheckPropertyNameIsNotNullOrEmpty(string propertyName)
-        {
-            if (string.IsNullOrWhiteSpace(propertyName))
-                throw new Exception();
-        }
-
-
-        public virtual void SetModificationDate()
-             => this.ModificationDate = DateTime.Now;
-
     }
 
 
     public interface IBaseEntity
     {
-        public bool IsChagned { get; }
+        bool IsChagned { get; }
+        bool IsRoot { get; }
+
+        EntityState State { get; }
         void AccpetChanges();
-        Dictionary<string, object> GetCurrentChanges();
+
+        bool HasAnyChildChanged();
+
+        public IEnumerable<IBaseEntity> GetChildChanges();
     }
 
 }
